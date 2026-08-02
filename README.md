@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎓 Graduance - Sistem Informasi Bimbingan Skripsi & Tugas Akhir
+# 🎓 Graduance - Thesis & Academic Guidance Information System
 
 [![Laravel Version](https://img.shields.io/badge/Laravel-v10.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP Version](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
@@ -10,156 +10,156 @@
 [![Security Audited](https://img.shields.io/badge/IDOR%20Security-Protected-blueviolet?style=for-the-badge&logo=shield)](./tests/BROKEN_FLOW_RESULTS.md)
 
 <p align="center">
-  <b>Graduance</b> adalah platform manajemen bimbingan skripsi dan tugas akhir perguruan tinggi berbasis web modern yang menghubungkan Mahasiswa, Dosen Pembimbing, dan Administrator Fakultas secara terintegrasi, cepat, dan aman.
+  <b>Graduance</b> is a modern web-based thesis and final project guidance management platform designed to connect Students, Academic Advisors (Teachers), and Faculty Administrators in a fast, integrated, and secure ecosystem.
 </p>
 
 </div>
 
 ---
 
-## 🌟 Fitur Utama Aplikasi
+## 🌟 Key Features
 
-### 👨‍🎓 Peran Mahasiswa (*Student*)
-* **Pendaftaran Topik Bimbingan**: Memilih dan mendaftar pada topik skripsi yang dibuka oleh Dosen Pembimbing.
-* **Pengajuan Revisi & Draf Skripsi**: Mengunggah file draf revisi (format PDF/DOCX) beserta catatan perbaikan.
-* **Obrolan Bimbingan Interactive**: Berinteraksi dan melihat riwayat ulasan/koreksi dari dosen secara *real-time*.
-* **Kotak Masuk Pengumuman**: Membaca pesan massal dan pengumuman dari Dosen Pembimbing & Fakultas.
+### 👨‍🎓 Student Role
+* **Thesis Topic Registration**: Browse and register for available thesis topics published by Academic Advisors.
+* **Revision & Draft Submissions**: Upload thesis draft revisions (PDF/DOCX format) along with revision notes.
+* **Interactive Guidance Chat**: Engage in real-time communication and view feedback and corrections from advisors.
+* **Announcement Inbox**: Read broadcast messages and official announcements sent by Advisors & Faculty Administrators.
 
-### 👨‍🏫 Peran Dosen Pembimbing (*Teacher*)
-* **Manajemen Topik Skripsi**: Membuka, mengedit, dan mengelola topik bimbingan tugas akhir.
-* **Review & Koreksi Bimbingan**: Membuka draf revisi mahasiswa, mengunduh lampiran, dan memberikan tanggapan ulasan.
-* **Persetujuan Sidang (*Approve*)**: Menyetujui bimbingan yang telah selesai untuk dipindahkan secara otomatis ke **Sistem Arsip**.
-* **Daftar Mahasiswa Bimbingan**: Memantau daftar seluruh mahasiswa yang dibimbing beserta progresnya.
-* **Pesan Massal (*Mass Messaging*)**: Mengirimkan pengumuman serentak ke seluruh/beberapa mahasiswa bimbingan.
+### 👨‍🏫 Teacher / Academic Advisor Role
+* **Topic Management**: Create, edit, and manage thesis topics available for guidance.
+* **Review & Correction System**: Inspect student draft submissions, download attachments, and leave structured feedback.
+* **Thesis Approval**: Approve completed guidance sessions to automatically archive student documents into the **Archive System**.
+* **Mentored Students Overview**: Monitor all assigned students and track their thesis progress.
+* **Mass Messaging**: Send simultaneous broadcast messages to all or selected mentored students.
 
-### 🛡️ Peran Administrator (*Admin*)
-* **Manajemen Pengguna**: Mengelola data Dosen Pembimbing dan Mahasiswa.
-* **Manajemen Kelas & Jurusan**: Mengelompokkan mahasiswa berdasarkan kelas akademik (`TI-4A`, `TI-4B`, `SI-4A`).
-* **Pengumuman Fakultas**: Mempublikasikan notifikasi resmi fakultas di dashboard seluruh pengguna.
-* **Pesan Pengingat Dosen (*Reminder*)**: Mengirimkan notifikasi pengingat ke dosen yang memiliki draf bimbingan tertunda.
-* **Sistem Arsip Skripsi**: Mengakses dan memfilter seluruh dokumen tugas akhir yang telah lulus/disetujui berdasarkan kelas.
+### 🛡️ Administrator Role
+* **User Management**: Manage accounts for Teachers and Students.
+* **Classroom & Department Management**: Group students by academic class (`TI-4A`, `TI-4B`, `SI-4A`).
+* **Faculty Announcements**: Publish official announcements across user dashboards.
+* **Advisor Reminders**: Send automated or manual reminder notifications to advisors with pending review drafts.
+* **Thesis Archive System**: Access, search, and filter approved thesis documents by academic class.
 
 ---
 
-## 🔑 Akun Demo Siap Pakai
+## 🔑 Demo Credentials
 
-Gunakan kredensial berikut untuk menguji coba aplikasi di lingkungan lokal:
+Use the following credentials to test the application in your local environment:
 
-| Peran (Role) | Email | Password | Pengguna |
+| Role | Email | Password | User Name |
 | :--- | :--- | :---: | :--- |
 | 🛡️ **Super Admin** | `admin@gmail.com` | `1234` | Dr. Ahmad Hidayat, M.Kom. |
-| 👨‍🏫 **Dosen Utama** | `teacher@gmail.com` | `1234` | Dr. Hendra Wijaya, M.T. |
-| 👨‍🏫 **Dosen AI** | `alex@gmail.com` | `1234` | Alex Bachtiar, Ph.D. |
-| 👨‍🏫 **Dosen UI/UX** | `siti@gmail.com` | `1234` | Dr. Siti Rahma, S.T., M.Kom. |
-| 👨‍🎓 **Mahasiswa (Revisi Aktif)** | `robert@gmail.com` | `1234` | Robert Davis Chaniago (`TI-4A`) |
-| 👨‍🎓 **Mahasiswa (Bab 3)** | `budi@gmail.com` | `1234` | Budi Setiawan (`TI-4A`) |
-| 👨‍🎓 **Mahasiswa (Lulus/Arsip)** | `citra@gmail.com` | `1234` | Citra Lestari (`TI-4B`) |
-| 👨‍🎓 **Mahasiswa (Pendaftar Baru)** | `dewi@gmail.com` | `1234` | Dewi Anggraini (`SI-4A`) |
+| 👨‍🏫 **Lead Advisor** | `teacher@gmail.com` | `1234` | Dr. Hendra Wijaya, M.T. |
+| 👨‍🏫 **AI Advisor** | `alex@gmail.com` | `1234` | Alex Bachtiar, Ph.D. |
+| 👨‍🏫 **UI/UX Advisor** | `siti@gmail.com` | `1234` | Dr. Siti Rahma, S.T., M.Kom. |
+| 👨‍🎓 **Student (Active Revision)** | `robert@gmail.com` | `1234` | Robert Davis Chaniago (`TI-4A`) |
+| 👨‍🎓 **Student (Chapter 3)** | `budi@gmail.com` | `1234` | Budi Setiawan (`TI-4A`) |
+| 👨‍🎓 **Student (Graduated/Archived)** | `citra@gmail.com` | `1234` | Citra Lestari (`TI-4B`) |
+| 👨‍🎓 **Student (New Applicant)** | `dewi@gmail.com` | `1234` | Dewi Anggraini (`SI-4A`) |
 
 ---
 
-## ⚡ Panduan Instalasi & Jalankan (Quick Start)
+## ⚡ Quick Start Guide
 
-Prasyarat: Dipastikan telah menginstall **Docker** & **Docker Compose** di perangkat Anda.
+Prerequisites: Ensure **Docker** & **Docker Compose** are installed on your system.
 
-### 1. Clone Repository & Masuk ke Folder
+### 1. Clone Repository & Navigate
 ```bash
 git clone https://github.com/IbnuKhalis/graduance.git
 cd graduance
 ```
 
-### 2. Salin Konfigurasi `.env`
+### 2. Copy `.env` File
 ```bash
 cp .env.example .env
 ```
 
-### 3. Jalankan Docker Container (PHP 8.2 + MySQL)
+### 3. Start Docker Containers (PHP 8.2 + MySQL)
 ```bash
 docker compose up -d
 ```
 
-### 4. Eksekusi Migrasi & Seeding Data Demo
+### 4. Run Database Migrations & Demo Seeding
 ```bash
 docker compose exec app php artisan migrate:fresh --seed
 ```
 
-### 5. Buat Link Simbolis Storage (Untuk Upload Foto & File)
+### 5. Create Storage Symbolic Link (For File Uploads)
 ```bash
 docker compose exec app php artisan storage:link
 ```
 
-### 6. Bersihkan Cache Konfigurasi & View
+### 6. Clear Configuration & View Caches
 ```bash
 docker compose exec app php artisan config:clear
 docker compose exec app php artisan view:clear
 ```
 
-Aplikasi kini siap diakses melalui browser Anda di: **`http://127.0.0.1:8000`** 🚀
+The application is now ready to access in your browser at: **`http://127.0.0.1:8000`** 🚀
 
 ---
 
-## 🧪 Pengujian Otomatis (Automated Testing)
+## 🧪 Automated Testing
 
-Aplikasi ini dilengkapi dengan **46 Test Cases (185 Assertions)** yang menguji alur bisnis normal maupun ketahanan keamanan aplikasi.
+Graduance features **46 Test Cases (185 Assertions)** covering standard business flows as well as security vulnerability tests.
 
-### 🟢 1. Menjalankan Seluruh Test Suite
+### 🟢 1. Run Complete Test Suite
 ```bash
 docker compose exec app php artisan test
 ```
 
-### 🎯 2. Menjalankan Khusus Happy Flow Suite
-Menguji 20 skenario alur utama (Autentikasi, Profil, Topik, Bimbingan, Approval, Pesan Massal, & Admin).
+### 🎯 2. Run Happy Flow Suite
+Tests 20 core business scenarios (Authentication, Profile, Topics, Guidance, Approval, Mass Messaging, & Admin).
 ```bash
 docker compose exec app php artisan test --testsuite=HappyFlow
 ```
-> 📄 [Lihat Dokumentasi & Hasil Happy Flow](./tests/HAPPY_FLOW_RESULTS.md)
+> 📄 [View Happy Flow Test Documentation & Results](./tests/HAPPY_FLOW_RESULTS.md)
 
-### 🛡️ 3. Menjalankan Khusus Broken Flow & Security Suite
-Menguji 16 skenario ketahanan celah keamanan (Proteksi IDOR, Role Bypass, Upload File Executable Terlarang, & Penanganan 404).
+### 🛡️ 3. Run Broken Flow & Security Suite
+Tests 16 vulnerability scenarios (IDOR Protection, Role Bypass, Executable Upload Prevention, & 404 Exception Handling).
 ```bash
 docker compose exec app php artisan test --testsuite=BrokenFlow
 ```
-> 📄 [Lihat Dokumentasi & Hasil Broken Flow](./tests/BROKEN_FLOW_RESULTS.md)
+> 📄 [View Broken Flow & Security Test Results](./tests/BROKEN_FLOW_RESULTS.md)
 
 ---
 
-## 🛠️ Teknologi & Arsitektur
+## 🛠️ Tech Stack & Architecture
 
-* **Framework Backend**: Laravel 10.x (PHP 8.2 CLI)
+* **Backend Framework**: Laravel 10.x (PHP 8.2 CLI)
 * **Database Management System**: MySQL 8.0 (Containerized)
-* **Optimasi Performa**: PHP OPcache, Route Caching, & View Pre-compilation
-* **Testing Framework**: PHPUnit 10 dengan SQLite In-Memory Database
+* **Performance Optimization**: PHP OPcache, Route Caching, & View Pre-compilation
+* **Testing Framework**: PHPUnit 10 with SQLite In-Memory Database
 * **Containerization**: Docker Compose (`app` & `mysql` services)
 * **Frontend**: Blade Templating, Vanilla CSS, Bootstrap 5, FontAwesome, & SweetAlert2
 
 ---
 
-## 📁 Struktur Direktori Utama
+## 📁 Directory Structure
 
 ```text
 graduance/
 ├── app/
-│   ├── Http/Controllers/    # Controller utama (Auth, Bimbingan, Topik, Admin, Profile)
-│   └── Models/              # Model Eloquent (User, Question, Answer, Topic, ClassRoom, dll)
+│   ├── Http/Controllers/    # Application controllers (Auth, Guidance, Topics, Admin, Profile)
+│   └── Models/              # Eloquent models (User, Question, Answer, Topic, ClassRoom, etc.)
 ├── database/
-│   ├── factories/           # Factory untuk unit testing
-│   ├── migrations/          # Migrasi skema database
-│   └── seeders/             # Seeder data dummy demo lengkap
-├── docker-compose.yml       # Konfigurasi container Docker app & database MySQL
-├── Dockerfile               # Setup PHP 8.2, pdo_mysql, & OPcache
+│   ├── factories/           # Factories for unit testing
+│   ├── migrations/          # Database schema migrations
+│   └── seeders/             # Complete demo database seeders
+├── docker-compose.yml       # Docker Compose setup for PHP app & MySQL database
+├── Dockerfile               # Setup for PHP 8.2, pdo_mysql, & OPcache
 ├── public/
-│   └── storage/             # Symlink ke storage/app/public untuk foto & dokumen
-├── resources/views/         # Template tampilan Blade UI/UX
+│   └── storage/             # Symlink to storage/app/public for photos & uploaded files
+├── resources/views/         # Blade UI/UX templates
 ├── routes/
-│   └── web.php              # Rute utama aplikasi & middleware otorisasi
+│   └── web.php              # Web routes & authorization middleware
 └── tests/
     ├── Feature/             # Automated test cases (Happy Flow & Broken Flow)
-    ├── HAPPY_FLOW_RESULTS.md # Laporan hasil tes Happy Flow
-    └── BROKEN_FLOW_RESULTS.md# Laporan hasil tes Broken Flow & Keamanan
+    ├── HAPPY_FLOW_RESULTS.md # Happy Flow test documentation report
+    └── BROKEN_FLOW_RESULTS.md# Broken Flow & Security test report
 ```
 
 ---
 
-## 📄 Lisensi
+## 📄 License
 
-Proyek ini berada di bawah lisensi [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
