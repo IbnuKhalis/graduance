@@ -1,29 +1,47 @@
-services:
+﻿services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: graduance_app
-    restart: always
-    ports:
-      - "8000:8000"
-    volumes:
-      - .:/var/www/html
+    restart: unless-stopped
+    env_file:
+      - .env
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
+    networks:
+      - proxy-network
+      - graduance-internal
+    volumes:
+      - graduance_storage:/var/www/html/storage
 
   mysql:
-    image: container-registry.oracle.com/mysql/community-server:latest
+    image: mysql:8.0-oracle
     container_name: graduance_mysql
-    restart: always
+    restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_ROOT_HOST: '%'
-      MYSQL_DATABASE: graduance
-    ports:
-      - "3306:3306"
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - graduance-internal
     volumes:
-      - db_data:/var/lib/mysql
+      - graduance_db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 25s
 
 volumes:
-  db_data:
+  graduance_db_data:
+  graduance_storage:
+
+networks:
+  proxy-network:
+    external: true
+  graduance-internal:
+    driver: bridge
