@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 set -e
 
 mkdir -p /var/www/html/storage/app/public/file-questions

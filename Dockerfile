@@ -1,4 +1,4 @@
-﻿# Stage 1: Build Frontend Assets with Vite
+# Stage 1: Build Frontend Assets with Vite
 FROM node:20-alpine AS frontend
 WORKDIR /app
 COPY package*.json ./
@@ -58,9 +58,11 @@ RUN composer install \
 COPY . /var/www/html/
 COPY --from=frontend /app/public/build /var/www/html/public/build/
 
-# Setup entrypoint and permissions
+# Setup entrypoint and permissions (strip BOM and CRLF for Linux compatibility)
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh \
+RUN sed -i '1s/^\xEF\xBB\xBF//' /usr/local/bin/docker-entrypoint.sh \
+    && sed -i 's/\r$//' /usr/local/bin/docker-entrypoint.sh \
+    && chmod +x /usr/local/bin/docker-entrypoint.sh \
     && chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 EXPOSE 80
