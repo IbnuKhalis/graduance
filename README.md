@@ -2,6 +2,7 @@
 
 # 🎓 Graduance - Thesis & Academic Guidance Information System
 
+[![Production Status](https://img.shields.io/badge/Production-Live-2ea44f?style=for-the-badge&logo=cloudflare&logoColor=white)](https://graduance.digitalneeds.my.id)
 [![Laravel Version](https://img.shields.io/badge/Laravel-v10.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP Version](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
@@ -10,7 +11,8 @@
 [![Security Audited](https://img.shields.io/badge/IDOR%20Security-Protected-blueviolet?style=for-the-badge&logo=shield)](./tests/BROKEN_FLOW_RESULTS.md)
 
 <p align="center">
-  <b>Graduance</b> is a modern web-based thesis and final project guidance management platform designed to connect Students, Academic Advisors (Teachers), and Faculty Administrators in a fast, integrated, and secure ecosystem.
+  <b>Graduance</b> is a modern web-based thesis and final project guidance management platform designed to connect Students, Academic Advisors (Teachers), and Faculty Administrators in a fast, integrated, and secure ecosystem.<br>
+  🌐 <b>Live Production:</b> <a href="https://graduance.digitalneeds.my.id">https://graduance.digitalneeds.my.id</a>
 </p>
 
 </div>
