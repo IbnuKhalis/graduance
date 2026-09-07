@@ -1,4 +1,4 @@
-﻿name: CI/CD Pipeline
+name: CI/CD Pipeline
 
 on:
   push:
@@ -55,8 +55,9 @@ jobs:
             echo "🚀 Starting automated deployment on VPS..."
             cd /opt/projects/graduance
             
-            echo "📥 Pulling latest commits from main..."
-            git pull origin main
+            echo "📥 Fetching and syncing latest commits from main..."
+            git fetch origin main
+            git reset --hard origin/main
             
             echo "🐳 Rebuilding and restarting application container..."
             docker compose up -d --build app
