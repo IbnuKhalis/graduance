@@ -1531,30 +1531,185 @@ section {
   background: var(--brand-subtle-bg);
 }
 
-.hero-image-card {
-  padding: 20px;
+/*--------------------------------------------------------------
+# Modern Hero Section & Interactive UI Showcase Mockup
+--------------------------------------------------------------*/
+.hero-section {
+  min-height: calc(90vh - 72px);
+  background: linear-gradient(180deg, #fef8f5 0%, #ffffff 100%);
+  padding: 85px 0 65px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-badge {
+  background: var(--brand-subtle-bg);
+  border: 1px solid var(--brand-border);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-primary);
+}
+
+.hero-badge .badge-icon {
+  margin-right: 8px;
+}
+
+.hero-title {
+  font-size: 3.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-heading);
+  letter-spacing: -0.75px;
+}
+
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 2.35rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin-top: 16px;
+}
+
+.hero-trust-pill {
   background: #ffffff;
-  border-radius: var(--radius-lg);
   border: 1px solid var(--card-border);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  box-shadow: 0 2px 6px rgba(78, 64, 57, 0.04);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* UI Showcase Window Mockup */
+.hero-mockup-window {
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 24px 60px -15px rgba(78, 64, 57, 0.12);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.hero-mockup-window:hover {
+  transform: translateY(-4px);
+}
+
+.mockup-window-header {
+  background: #faf7f5;
+  border-bottom: 1px solid var(--card-border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.window-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
   display: inline-block;
 }
 
-.hero-stats-row .stat-number {
-  font-weight: 800;
-  font-size: 1.75rem;
+.window-dot.red { background: #f87171; }
+.window-dot.yellow { background: #fbbf24; }
+.window-dot.green { background: #4ade80; }
+
+.mockup-url-bar {
+  background: #ffffff;
+  border: 1px solid #ebdcd3;
+  border-radius: 50px;
+  padding: 5px 20px;
+  font-size: 0.78rem;
+  color: #8c786e;
+  font-family: monospace;
+}
+
+.mockup-window-body {
+  padding: 32px 30px;
+  background: #fdfcfb;
+}
+
+.mockup-submission-card {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 14px;
+}
+
+.mockup-file-chip {
+  background: #fdf1ec;
+  border: 1px solid #fcebe3;
   color: var(--brand-primary);
-  margin-bottom: 2px;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.hero-stats-row .stat-label {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 0;
-  font-weight: 500;
+.mockup-advisor-reply {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid var(--brand-primary);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 25px -5px rgba(78, 64, 57, 0.08);
 }
 
-/* Section Headings */
+.floating-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid var(--brand-border);
+  box-shadow: 0 8px 20px -4px rgba(235, 93, 30, 0.18);
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  display: inline-block;
+  animation: pulse-ring 1.8s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(235, 93, 30, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(235, 93, 30, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(235, 93, 30, 0); }
+}
+
+/*--------------------------------------------------------------
+# Section Headings & Badges
+--------------------------------------------------------------*/
 .section-subheading {
   font-size: 12px;
   font-weight: 700;
@@ -1566,119 +1721,212 @@ section {
 }
 
 .section-title h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 800;
   color: var(--text-heading);
-  line-height: 1.3;
-  margin-bottom: 10px;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
 }
 
 .section-title p {
   font-size: 1.05rem;
   color: var(--text-muted);
   font-weight: 400;
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
 }
 
-.section-title p::after {
-  display: none; /* Removed harsh old red line under text */
-}
-
-/* Service Cards */
-.service-card {
+/*--------------------------------------------------------------
+# Core Capabilities Cards (Human & Accessible UI - WCAG AAA)
+--------------------------------------------------------------*/
+.capability-card {
   background: #ffffff;
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-md);
-  padding: 32px 28px;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: var(--shadow-sm);
-  text-align: left !important;
+  border: 1px solid #eae3df;
+  border-radius: 20px;
+  padding: 38px 36px;
+  height: 100%;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(78, 64, 57, 0.04);
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-  border-color: rgba(235, 93, 30, 0.3);
+.capability-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(194, 65, 12, 0.35);
+  box-shadow: 0 16px 32px -8px rgba(78, 64, 57, 0.1);
 }
 
-.service-card .icon-wrapper {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-md);
-  background: var(--brand-subtle-bg);
-  color: var(--brand-primary);
+.capability-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fdf1ec;
+  color: #c2410c;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
+  font-size: 22px;
+  flex-shrink: 0;
 }
 
-.service-card .service-title {
+.capability-title {
   font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-heading);
-  margin-bottom: 12px;
+  font-weight: 750;
+  color: #2d2420;
+  letter-spacing: -0.2px;
+  line-height: 1.35;
 }
 
-.service-card .description {
-  color: var(--text-muted);
+.capability-desc {
+  font-size: 1rem;
+  color: #4a3e39;
+  line-height: 1.65;
+}
+
+.capability-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #f1eae6;
+}
+
+.capability-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   font-size: 0.95rem;
-  line-height: 1.6;
+  color: #3e342f;
+  line-height: 1.55;
 }
 
-/* How It Works Steps */
-.step-card {
+.capability-list li i {
+  color: #c2410c;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+/*--------------------------------------------------------------
+# Connected Journey Stepper (How It Works)
+--------------------------------------------------------------*/
+.journey-step-card {
   background: #ffffff;
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-md);
-  padding: 32px 24px;
+  border-radius: 20px;
+  padding: 36px 28px;
   height: 100%;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-sm);
+  position: relative;
+  text-align: left;
 }
 
-.step-card:hover {
+.journey-step-card:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--brand-primary);
+  transform: translateY(-4px);
 }
 
-.step-badge {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--brand-primary);
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+.journey-step-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: rgba(235, 93, 30, 0.25);
+  line-height: 1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-bottom: 12px;
 }
 
-.step-title {
-  font-size: 1.15rem;
-  font-weight: 700;
+.journey-step-card:hover .journey-step-number {
+  color: var(--brand-primary);
+}
+
+.journey-step-title {
+  font-size: 1.25rem;
+  font-weight: 750;
   color: var(--text-heading);
+  margin-bottom: 10px;
 }
 
-.step-desc {
-  font-size: 0.9rem;
+.journey-step-desc {
+  font-size: 0.95rem;
   color: var(--text-muted);
+  line-height: 1.6;
   margin-bottom: 0;
 }
 
-/* Contact Modernization */
-.contact-info-card,
-.contact-form-card {
+/*--------------------------------------------------------------
+# FAQ Accordion Styling
+--------------------------------------------------------------*/
+.faq-accordion .accordion-item {
+  border: 1px solid var(--card-border) !important;
+  border-radius: 14px !important;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+}
+
+.faq-accordion .accordion-button {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  padding: 18px 24px;
+  background: #ffffff;
+  box-shadow: none !important;
+  transition: all 0.2s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  color: var(--brand-primary);
+  background: var(--brand-subtle-bg);
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.faq-accordion .accordion-body {
+  padding: 20px 24px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  background: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# Pre-Footer Conversion CTA Banner
+--------------------------------------------------------------*/
+.prefooter-cta-card {
+  background: linear-gradient(135deg, #fef8f5 0%, #ffffff 100%);
+  border: 1.5px solid var(--brand-border);
+  border-radius: 28px;
+  padding: 60px 32px;
+  box-shadow: 0 20px 45px -10px rgba(235, 93, 30, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.prefooter-cta-card h2 {
+  font-size: 2.4rem;
+  font-weight: 850;
+  color: var(--text-heading);
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.prefooter-cta-card p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 580px;
+  margin: 0 auto 28px;
+}
+
+/* Contact Support Modernization */
+.contact-info-card {
   background: #ffffff;
   border-radius: var(--radius-md);
   border: 1px solid var(--card-border);
   box-shadow: var(--shadow-sm);
   padding: 32px;
   border-top: 4px solid var(--brand-primary) !important;
-  border-bottom: none !important;
 }
 
 .contact-icon {
@@ -1705,37 +1953,6 @@ section {
   color: var(--text-muted);
   font-size: 0.9rem;
   margin-bottom: 0;
-}
-
-.custom-input {
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-sm);
-  padding: 10px 14px;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-}
-
-.custom-input:focus {
-  border-color: var(--brand-primary);
-  box-shadow: 0 0 0 3px rgba(235, 93, 30, 0.15);
-  outline: none;
-}
-
-.btn-send-message {
-  background: var(--brand-primary);
-  color: #ffffff;
-  border: none;
-  padding: 12px 28px;
-  border-radius: var(--radius-pill);
-  font-weight: 600;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-
-.btn-send-message:hover {
-  background: var(--brand-primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(235, 93, 30, 0.25);
 }
 
 /* Footer Adjustments */

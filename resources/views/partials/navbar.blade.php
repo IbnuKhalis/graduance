@@ -11,11 +11,12 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                <li><a class="nav-link scrollto" href="#how-it-works">How It Works</a></li>
-                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                <li><a class="btn-nav-outline scrollto" href="/login">Login</a></li>
-                <li><a class="getstarted scrollto" href="/register">Sign Up</a></li>
+                <li><a class="nav-link scrollto" href="#features">Features</a></li>
+                <li><a class="nav-link scrollto" href="#how-it-works">Workflow</a></li>
+                <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Support</a></li>
+                <li><a class="btn-nav-outline scrollto" href="/login">Log In</a></li>
+                <li><a class="getstarted scrollto" href="/register">Get Started</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
